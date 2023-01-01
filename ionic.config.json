@@ -1,0 +1,7 @@
+{
+  "name": "neonote",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
