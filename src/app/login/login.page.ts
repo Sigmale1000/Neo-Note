@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController, LoadingController } from '@ionic/angular';
+import { delay } from 'rxjs';
 import { AuthService } from '../_services/auth.service';
+import { DataService } from '../_services/data.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +19,8 @@ export class LoginPage implements OnInit {
     private loadingController: LoadingController,
     private alertController: AlertController,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private UserService: DataService
   ) { }
 
   // Easy access for form fields
@@ -45,6 +48,7 @@ export class LoginPage implements OnInit {
 
     if (user) {
       this.router.navigateByUrl('/home', { replaceUrl: true });
+      this.UserService.newUser();
     } else {
       this.showAlert('Registration failed', 'Please try again!');
     }
@@ -56,7 +60,6 @@ export class LoginPage implements OnInit {
 
     const user = await this.authService.login(this.credentials.value);
     await loading.dismiss();
-
     if (user) {
       this.router.navigateByUrl('/home', { replaceUrl: true });
     } else {
