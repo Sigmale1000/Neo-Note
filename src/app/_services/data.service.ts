@@ -3,9 +3,9 @@ import { Firestore, collection, collectionData, doc, docData, addDoc, deleteDoc,
 import { Observable } from 'rxjs';
 import {
   Auth,
+  deleteUser,
   getAuth
 } from '@angular/fire/auth';
-import { UserInfo } from 'os';
 import { setDoc } from 'firebase/firestore';
 
 const auth = getAuth();
@@ -22,7 +22,7 @@ export class DataService {
 
   constructor(private firestore: Firestore) { }
 
-  newUser() {
+  async newUser() {
     if (user !== null) {
       // The user object has basic properties such as display name, email, etc.
       const displayName = user.displayName;
@@ -40,10 +40,13 @@ export class DataService {
       };
 
       const addDocument = collection(this.firestore, 'users');
-      return setDoc(doc(addDocument, uid), UserInfo)
-
+      setDoc(doc(addDocument, uid), UserInfo)
+      console.log('Creating account and database with account email: ' + email)
     } else {
-      return console.log('Failed adding registration document')
+      console.log('Failed adding registration document')
+      if (user != null) {
+        deleteUser(user)
+      }
     }
   }
 }
