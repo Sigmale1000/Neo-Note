@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>New Note</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="start">New Note</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-  <ion-button fill="clear" [routerLink]="['/home']">Back</ion-button>
 </ion-content>
