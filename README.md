@@ -10,10 +10,17 @@ Are you tired of forgetting important tasks and notes Look no further, because N
  📅 Add expiry- and reminder dates to your notes <br>
  🏪 Available on the internet, iOS, and Google Play Store <br>
 ## 💁Information
- 🔖 Made with Ionic --Angular Framework  [Ionic](httpsionicframework.com)  [Angular](httpsangular.io) <br>
- 💽 Uses Firebase as the Database  [Firebase](httpsfirebase.google.com) <br>
+ 🔖 Made with Ionic --Angular Framework  ([Ionic](https://ionicframework.com) / [Angular](https://angular.io)) <br>
+ 💽 Uses Firebase as the Database  ([Firebase](httpsfirebase.google.com)) <br>
 ## 🧑‍💻Contributing
 We welcome anyone to contribute to the Neo Note project! If you find any bugs or have suggestions for improvements, feel free to fork the repository and create a pull request with your changes.
+### 🤧Commands
+There are a few commands that need to be run for the project to work on your computer!
+* First of all you have to have **Node.js** installed to manage the packages ([Node.js](https://nodejs.org/en/))
+* After installing you can **fork** and **clone** the repo to your computer and then open the project in **Visual Studio Code** ([Visual Studio Code](https://code.visualstudio.com/download))
+* Now install the **Ionic Extension** from VCS Extensions, it will offer you all needed libraries and packages to install ([VCS Ionic Docs](https://ionicframework.com/docs/intro/vscode-extension#:~:text=The%20Ionic%20Visual%20Studio%20Code%20extension%20helps%20you%20perform%20various,logo%20in%20the%20activity%20bar.))
+* Now install the **Firebase Package** with ```npm i firebase``` ([NPM Firebase](https://www.npmjs.com/package/firebase))
+
 ### 📥Download
 Head over to our GitHub repository to download the latest version of Neo Note.
 
