@@ -20,6 +20,7 @@ There are a few commands that need to be run for the project to work on your com
 * After installing you can **fork** and **clone** the repo to your computer and then open the project in **Visual Studio Code** ([Visual Studio Code](https://code.visualstudio.com/download))
 * Now install the **Ionic Extension** from VCS Extensions, it will offer you all needed libraries and packages to install ([VCS Ionic Docs](https://ionicframework.com/docs/intro/vscode-extension#:~:text=The%20Ionic%20Visual%20Studio%20Code%20extension%20helps%20you%20perform%20various,logo%20in%20the%20activity%20bar.))
 * Now install the **Firebase Package** with ```npm i firebase``` ([NPM Firebase](https://www.npmjs.com/package/firebase))
+* **Run** the project on the browser with ```ionic serve```
 
 ### 📥Download
 Head over to our GitHub repository to download the latest version of Neo Note.
