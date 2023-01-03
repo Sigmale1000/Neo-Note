@@ -1,11 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Login
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="ion-padding">
+  <form (ngSubmit)="login()" [formGroup]="credentials">
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+      <ion-note slot="error" *ngIf="(email || email) && email.errors">Email is invalid</ion-note>
+    </ion-item>
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      <ion-note slot="error" *ngIf="(password || password) && password.errors">Password needs to be 6
+        characters</ion-note>
+    </ion-item>
 
+    <ion-button type="submit" expand="block" [disabled]="!credentials.valid">Log in</ion-button>
+    <ion-button type="button" expand="block" color="secondary" (click)="register()">Create account</ion-button>
+  </form>
 </ion-content>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "neonote-e776f": {
+      "hosting": {
+        "app": [
+          "neonote-e776f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "neonote-e776f"
+  }
+}
