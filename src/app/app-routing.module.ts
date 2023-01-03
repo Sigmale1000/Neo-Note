@@ -32,11 +32,6 @@ const routes: Routes = [
     ...canActivate(redirectLoggedInToHome)
   },
   {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then(m => m.RegisterPageModule),
-    ...canActivate(redirectLoggedInToHome)
-  },
-  {
     path: 'new-note',
     loadChildren: () => import('./new-note/new-note.module').then(m => m.NewNotePageModule),
     ...canActivate(redirectUnauthorizedToLogin)
