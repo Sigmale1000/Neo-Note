@@ -25,6 +25,16 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-ion-header ion-toolbar ion-title {
-    text-transform: uppercase
+ion-modal {
+    &.center {
+        --width: calc(100% - 2em);
+        align-items: center;
+        --height: auto;
+
+        .ion-page {
+            position: relative;
+            display: block;
+            contain: content;
+        }
+    }
 }

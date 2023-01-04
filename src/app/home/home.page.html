@@ -7,13 +7,30 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="container__notes ion-padding">
-    <h1>Your Notes</h1>
+  <div class="topBanner">
+    <ion-card>
+      <img alt="Happy New Year 2023 Image"
+        src="https://thumbs.dreamstime.com/b/happy-new-year-beautiful-holiday-web-banner-flyer-golden-firework-sparkling-number-night-blue-sky-background-259168939.jpg" />
+      <ion-card-header>
+        <ion-card-title>Happy New Year</ion-card-title>
+        <ion-card-subtitle>Neo Note wishes you a happy new year full of joy, fun and good health.</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
+  <div class="userNotes ion-padding">
+    <h2>Your Notes</h2>
     <ion-list>
-      <ion-item>
-        <h4 slot="start">Welcome to Neo Note!</h4>
-      </ion-item>
+      <ng-container *ngFor='let note of notes$ | async'>
+          <ion-item>
+            <h5 class=“notesTitle”>{{ note.Title }} </h5>
+            <ion-button slot="end" fill="none"><ion-icon name="arrow-forward"></ion-icon></ion-button>
+          </ion-item>
+      </ng-container>
     </ion-list>
+  </div>
+  <div class="sharedNotes ion-padding">
+    <h2>Shared Notes</h2>
+
   </div>
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button size="medium">
