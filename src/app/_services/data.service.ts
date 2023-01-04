@@ -6,13 +6,7 @@ import {
   deleteUser,
   getAuth
 } from '@angular/fire/auth';
-import { setDoc } from 'firebase/firestore';
-
-const auth = getAuth();
-const user = auth.currentUser;
-
-
-
+import { CollectionReference, setDoc } from 'firebase/firestore';
 
 
 @Injectable({
@@ -20,6 +14,9 @@ const user = auth.currentUser;
 })
 export class DataService {
 
-  constructor(private firestore: Firestore) { }
+
+
+  constructor() { }
+
 
 }

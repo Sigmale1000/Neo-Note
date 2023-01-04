@@ -1,12 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-title class="ion-text-center">
       Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div class="container__notes ion-padding">
+    <h1>Your Notes</h1>
+    <ion-list>
+      <ion-item>
+        <ion-label>Pokémon Yellow</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button size="medium">
       <ion-icon name="add"></ion-icon>
