@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Injectable, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -12,6 +12,8 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 
+import { FormBuilder } from '@angular/forms';
+
 @NgModule({
 	declarations: [AppComponent],
 	entryComponents: [],
@@ -24,7 +26,7 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
 		provideFirestore(() => getFirestore()),
 		provideStorage(() => getStorage())
 	],
-	providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+	providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, FormBuilder,],
 	bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
