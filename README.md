@@ -23,7 +23,7 @@ There are a few commands that need to be run for the project to work on your com
 * **Run** the project on the browser with ```ionic serve```
 
 ### 📥Download
-Head over to our GitHub repository to download the latest version of ([Neo Note](https://github.com/Sigmale1000/neonote)).
+Head over to our GitHub repository to download the latest version of [Neo Note](https://github.com/Sigmale1000/neonote).
 
 🚀 Start Taking Notes with Neo Note Today!
 
