@@ -1,7 +1,7 @@
 <img src=md-banner.png height=10%/>
 
 # 📝Neo Note - The Ultimate Notepad
-Are you tired of forgetting important tasks and notes Look no further, because Neo Note has got you covered! With our sleek and intuitive web-app, you can easily add, edit, and delete notes on the go. Whether you're at home or on the go, Neo Note has got you covered.
+Are you tired of forgetting important tasks and notes? Look no further, because Neo Note has got you covered! With our sleek and intuitive web-app, you can easily add, edit, and delete notes on the go. Whether you're at home or on the go, Neo Note has got your back. :)
 
 ## ⛲Features 
  🔒 Login and register to access your notes from anywhere <br>
