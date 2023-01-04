@@ -29,12 +29,11 @@ export class HomePage {
     return collectionData(jc, { idField: 'id' })
   }
 
-  test(){
+  test() {
     console.log("HELLO")
   }
 
   ngOnInit() {
-    this.notes$.pipe(take(1)).subscribe()
   }
 
 
