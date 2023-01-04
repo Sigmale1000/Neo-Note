@@ -1,0 +1,15 @@
+ion-list{
+    height: 100%;
+}
+
+.titleNote{
+    width: 100%;
+    padding: 1% 1.5%;
+    font-size: 25px;
+}
+
+.textNote{
+    word-break: break-all;
+    word-wrap: break-word;
+    height: max-content;
+}

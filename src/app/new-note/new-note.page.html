@@ -8,25 +8,25 @@
 </ion-header>
 
 <ion-content>
-
-
+  <ion-list>
+    <ion-item>
+      <ion-textarea placeholder="Enter title" class="titleNote"	autofocus type="text"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea placeholder="Enter text" class="textNote" type="text"></ion-textarea>
+    </ion-item>
+  </ion-list>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button>
+      <ion-button (click)="chooseDelete()">
         <ion-icon slot="icon-only" name="trash"></ion-icon>
-      </ion-button>
-      <ion-button>
-        <ion-icon slot="icon-only" name="settings"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button (click)="chooseTheme()">
-        <ion-icon slot="icon-only" name="color-palette"></ion-icon>
-      </ion-button>
-      <ion-button (click)="chooseImage()">
+      <ion-button (click)="presentActionSheet()">
         <ion-icon slot="icon-only" name="camera"></ion-icon>
       </ion-button>
       <ion-button>

@@ -4,3 +4,27 @@
     --ion-safe-area-right: 0;
     --ion-safe-area-left: 0;
 }
+
+.underConstruction {
+    text-align: center;
+    display: block;
+    margin-top: 20%;
+    color: rgb(214, 214, 214);
+}
+
+.underConstruction h1{
+    font-size: 80px;
+}
+
+.underConstruction h3{
+    font-size: 25px;
+}
+
+.underConstruction h4{
+    text-decoration: none;
+    color: rgba(184, 184, 184, 0.81);
+}
+
+.underConstruction h4 a{
+    text-decoration: none;
+}
