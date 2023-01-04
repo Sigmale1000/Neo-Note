@@ -24,7 +24,7 @@ export class NewNotePage implements OnInit {
     private actionSheetCtrl: ActionSheetController
   ) { }
 
-  async presentActionSheet() {
+  async cameraActionSheet() {
     const actionSheet = await this.actionSheetCtrl.create({
       header: 'Add new banner',
       subHeader: 'Please upload or take a new banner to add to your note',
@@ -55,53 +55,6 @@ export class NewNotePage implements OnInit {
 
     const result = await actionSheet.onDidDismiss();
     this.result = JSON.stringify(result, null, 2);
-  }
-
-  async chooseImage() {
-    const alert = await this.alertController.create({
-      header: 'Upload new Images',
-      buttons: ['OK'],
-      inputs: [
-        {
-          label: 'Banner',
-          type: 'radio',
-          value: 'banner',
-        },
-        {
-          label: 'Image',
-          type: 'radio',
-          value: 'image',
-        },
-      ],
-    });
-
-    await alert.present();
-  }
-
-  async chooseTheme() {
-    const alert = await this.alertController.create({
-      header: 'Select your color theme',
-      buttons: ['OK'],
-      inputs: [
-        {
-          label: 'Dark',
-          type: 'radio',
-          value: 'dark',
-        },
-        {
-          label: 'Bright',
-          type: 'radio',
-          value: 'bright',
-        },
-        {
-          label: 'Blue',
-          type: 'radio',
-          value: 'blue',
-        },
-      ],
-    });
-
-    await alert.present();
   }
 
   async chooseDelete() {
