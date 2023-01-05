@@ -1,41 +1,45 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title class="ion-text-center">
-      Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="ion-page">
 
-<ion-content [fullscreen]="true">
-  <div class="topBanner">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title class="ion-text-center">
+        Home
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  </div>
-  <div class="userNotes ion-padding">
-    <h2>Your Notes</h2>
-    <ng-container *ngFor='let note of notes$ | async'>
-      <ion-item button>
-        <h5 class=“notesTitle”>{{ note.Title }} </h5>
-        <ion-icon name="arrow-forward" slot="end"></ion-icon>
-      </ion-item>
-    </ng-container>
+  <ion-content [fullscreen]="true">
+    <div class="topBanner">
 
-  </div>
-</ion-content>
+    </div>
+    <div class="userNotes ion-padding">
+      <h2>Your Notes</h2>
+      <ng-container *ngFor='let note of notes$ | async'>
+        <ion-item button>
+          <h5 class=“notesTitle”>{{ note.Title }} </h5>
+          <ion-icon name="arrow-forward" slot="end"></ion-icon>
+        </ion-item>
+      </ng-container>
+    </div>
+  </ion-content>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button [routerLink]="['/settings']">
-        <ion-icon name="settings"></ion-icon>
-      </ion-button>
-      <ion-button [routerLink]="['/friends']">
-        <ion-icon name="people"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button [routerLink]="['/new-note']">
-        <ion-icon name="create-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button [routerLink]="['/settings']">
+          <ion-icon name="settings"></ion-icon>
+        </ion-button>
+        <ion-button [routerLink]="['/friends']">
+          <ion-icon name="people"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="['/new-note']">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+
+</div>

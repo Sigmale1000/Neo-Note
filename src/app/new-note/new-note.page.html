@@ -12,11 +12,11 @@
     <ion-item fill="solid" class="ion-margin-bottom" counter="true">
       <ion-input class="titleNote" type="text" placeholder="Your title" formControlName="Title"
         maxlength="40"></ion-input>
-        <ion-note slot="error">Please enter atleast one character.</ion-note>
+      <ion-note slot="error">Please enter atleast one character.</ion-note>
     </ion-item>
     <ion-item fill="solid" class="ion-margin-bottom" counter="true">
       <ion-textarea class="textNote" type="text" placeholder="Your note" formControlName="Main"
-        maxlength="2000"></ion-textarea>
+        maxlength="1500"></ion-textarea>
     </ion-item>
   </form>
 </ion-content>
@@ -24,14 +24,11 @@
 <ion-footer>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button (click)="chooseDelete()">
-        <ion-icon slot="icon-only" name="trash"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
       <ion-button (click)="cameraActionSheet()">
         <ion-icon slot="icon-only" name="camera"></ion-icon>
       </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
       <ion-button (click)="newNote()" type="submit" [disabled]="!credentials.valid">
         <ion-icon slot="icon-only" name="checkmark"></ion-icon>
       </ion-button>

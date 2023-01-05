@@ -63,24 +63,6 @@ export class NewNotePage implements OnInit {
     this.result = JSON.stringify(result, null, 2);
   }
 
-  async chooseDelete() {
-    const alert = await this.alertController.create({
-      header: 'Do you really want to delete this note?',
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-        },
-        {
-          text: 'Yes',
-          role: 'confirm',
-        },
-      ],
-    });
-
-    await alert.present();
-  }
-
   async newNote() {
     const auth = getAuth();
     const user = auth.currentUser;

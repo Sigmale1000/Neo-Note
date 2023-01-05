@@ -3,6 +3,9 @@ import { Firestore, collection, collectionData, doc, docData, addDoc, deleteDoc,
 import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, deleteUser, getAuth } from '@angular/fire/auth';
 import { map, Observable, shareReplay, take } from 'rxjs';
 
+import { ActionSheetController } from '@ionic/angular';
+
+
 
 @Component({
   selector: 'app-home',
@@ -12,12 +15,11 @@ import { map, Observable, shareReplay, take } from 'rxjs';
 
 
 export class HomePage {
-
   userId!: String;
   notes$: Observable<any[]>;
 
   constructor(
-    private firestore: Firestore, private auth: Auth,
+    private firestore: Firestore, private auth: Auth, private actionSheetCtrl: ActionSheetController,
   ) {
     this.notes$ = this.getUserNotes().pipe(shareReplay(1));
   }
@@ -29,7 +31,9 @@ export class HomePage {
     return collectionData(jc, { idField: 'id' })
   }
 
-
+  openNote() {
+    
+  }
 
   ngOnInit() {
   }
