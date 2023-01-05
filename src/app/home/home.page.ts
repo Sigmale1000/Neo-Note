@@ -29,9 +29,7 @@ export class HomePage {
     return collectionData(jc, { idField: 'id' })
   }
 
-  test() {
-    console.log("HELLO")
-  }
+
 
   ngOnInit() {
   }

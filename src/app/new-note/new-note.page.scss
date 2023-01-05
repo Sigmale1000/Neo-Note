@@ -1,15 +1,22 @@
-ion-list{
-    height: 100%;
-}
-
-.titleNote{
+.titleNote {
     width: 100%;
     padding: 1% 1.5%;
-    font-size: 25px;
+    font-size: 23px;
 }
 
-.textNote{
+.titleNote ion-label {
+    color: rgba(255, 255, 255, 0.776);
+}
+
+.textNote {
+    width: 100%;
+    padding: 1% 1.5%;
+    font-size: 18px;
+    min-height: 120vw;
     word-break: break-all;
     word-wrap: break-word;
-    height: max-content;
+}
+
+.textNote ion-label {
+    color: rgba(255, 255, 255, 0.776);
 }

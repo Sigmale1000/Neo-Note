@@ -8,14 +8,17 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-textarea placeholder="Enter title" class="titleNote"	autofocus type="text"></ion-textarea>
+  <form (ngSubmit)="newNote()" [formGroup]="credentials">
+    <ion-item fill="solid" class="ion-margin-bottom" counter="true">
+      <ion-input class="titleNote" type="text" placeholder="Your title" formControlName="Title"
+        maxlength="40"></ion-input>
+        <ion-note slot="error">Please enter atleast one character.</ion-note>
     </ion-item>
-    <ion-item>
-      <ion-textarea placeholder="Enter text" class="textNote" type="text"></ion-textarea>
+    <ion-item fill="solid" class="ion-margin-bottom" counter="true">
+      <ion-textarea class="textNote" type="text" placeholder="Your note" formControlName="Main"
+        maxlength="2000"></ion-textarea>
     </ion-item>
-  </ion-list>
+  </form>
 </ion-content>
 
 <ion-footer>
@@ -29,7 +32,7 @@
       <ion-button (click)="cameraActionSheet()">
         <ion-icon slot="icon-only" name="camera"></ion-icon>
       </ion-button>
-      <ion-button>
+      <ion-button (click)="newNote()" type="submit" [disabled]="!credentials.valid">
         <ion-icon slot="icon-only" name="checkmark"></ion-icon>
       </ion-button>
     </ion-buttons>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Firestore, collection, collectionData, doc, docData, addDoc, deleteDoc, updateDoc, setDoc, getDoc, DocumentReference } from '@angular/fire/firestore';
+import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, deleteUser, getAuth } from '@angular/fire/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController, LoadingController, ActionSheetController } from '@ionic/angular';
@@ -12,8 +14,11 @@ import { DataService } from '../_services/data.service';
   styleUrls: ['./new-note.page.scss'],
 })
 export class NewNotePage implements OnInit {
+  credentials!: FormGroup;
   result!: string;
-
+  customCounterFormatter(inputLength: number, maxLength: number) {
+    return `${maxLength - inputLength} characters remaining`;
+  }
   constructor(
     private fb: FormBuilder,
     private loadingController: LoadingController,
@@ -21,7 +26,8 @@ export class NewNotePage implements OnInit {
     private authService: AuthService,
     private router: Router,
     private UserService: DataService,
-    private actionSheetCtrl: ActionSheetController
+    private actionSheetCtrl: ActionSheetController,
+    private firestore: Firestore,
   ) { }
 
   async cameraActionSheet() {
@@ -75,8 +81,31 @@ export class NewNotePage implements OnInit {
     await alert.present();
   }
 
+  async newNote() {
+    const auth = getAuth();
+    const user = auth.currentUser;
+    const loading = await this.loadingController.create();
+    await loading.present();
+    const addNote = await addDoc(collection(this.firestore, `users/${user?.uid}/notes`), this.credentials.value)
+    this.router.navigateByUrl('/home', { replaceUrl: true });
+    await loading.dismiss();
+  }
 
   ngOnInit() {
+    const auth = getAuth();
+    const user = auth.currentUser;
+    if (user != null) {
+      const currentDate = new Date();
+      this.credentials = this.fb.group({
+        Title: ['', [Validators.required, Validators.minLength(1)]],
+        Main: ['', [Validators.minLength(0)]],
+        createdAt: currentDate,
+        updatetAt: currentDate,
+        image: '',
+        rememberDate: '',
+        expirationDate: '',
+      });
+    }
   }
 
 }
