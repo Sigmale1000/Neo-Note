@@ -20,20 +20,22 @@
     </ng-container>
 
   </div>
-  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button size="medium">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-list side="top">
-      <ion-fab-button [routerLink]="['/settings']">
-        <ion-icon name="settings"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-button [routerLink]="['/friends']">
-        <ion-icon name="people"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-button [routerLink]="['/new-note']">
-        <ion-icon name="document"></ion-icon>
-      </ion-fab-button>
-    </ion-fab-list>
-  </ion-fab>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/settings']">
+        <ion-icon name="settings"></ion-icon>
+      </ion-button>
+      <ion-button [routerLink]="['/friends']">
+        <ion-icon name="people"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/new-note']">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
