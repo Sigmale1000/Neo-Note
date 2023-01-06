@@ -5,7 +5,6 @@ import { map, Observable, shareReplay, take } from 'rxjs';
 
 import { ActionSheetController } from '@ionic/angular';
 import { AuthService } from '../_services/auth.service'
-import { LoginPageRoutingModule } from '../login/login-routing.module';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 
