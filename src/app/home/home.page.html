@@ -15,7 +15,7 @@
     <div class="userNotes ion-padding">
       <h2>Your Notes</h2>
       <ng-container *ngFor='let note of notes$ | async'>
-        <ion-item button href="home/{{ note.id }}">
+        <ion-item button [routerLink]="['{{ note.id }}']">
           <h5 class=“notesTitle”>{{ note.Title }} </h5>
         </ion-item>
       </ng-container>
