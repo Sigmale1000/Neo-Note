@@ -4,11 +4,11 @@
 Are you tired of forgetting important tasks and notes? Look no further, because Neo Note has got you covered! With our sleek and intuitive web-app, you can easily add, edit, and delete notes on the go. Whether you're at home or on the go, Neo Note has got your back. :)
 
 ## ⛲Features 
- 🔒 Login and register to access your notes from anywhere <br>
- ✍️ Add, edit, and delete notes with ease <br>
+ 🔒 Login and register to access your notes from any device <br>
+ ✍️ Add, edit and delete notes with ease <br>
  🤝 Share your Notes with friends <br>
  📅 Add expiry- and reminder dates to your notes <br>
- 🏪 Available on the internet, iOS, and Google Play Store <br>
+ 🏪 Available on the internet, iOS and Google Play Store <br>
 ## 💁Information
  🔖 Made with Ionic --Angular Framework  ([Ionic](https://ionicframework.com) / [Angular](https://angular.io)) <br>
  💽 Uses Firebase as the Database  ([Firebase](httpsfirebase.google.com)) <br>
@@ -19,7 +19,7 @@ There are a few commands that need to be run for the project to work on your com
 * First of all you have to have **Node.js** installed to manage the packages ([Node.js](https://nodejs.org/en/))
 * After installing you can **fork** and **clone** the repo to your computer and then open the project in **Visual Studio Code** ([Visual Studio Code](https://code.visualstudio.com/download))
 * Now install the **Ionic Extension** from VCS Extensions, it will offer you all needed libraries and packages to install ([VCS Ionic Docs](https://ionicframework.com/docs/intro/vscode-extension#:~:text=The%20Ionic%20Visual%20Studio%20Code%20extension%20helps%20you%20perform%20various,logo%20in%20the%20activity%20bar.))
-* Now install the **Firebase Package** with ```npm i firebase``` and ```ng add @angular/fire``` ([NPM Firebase](https://www.npmjs.com/package/firebase))
+* Now install the **Firebase Package** with ```ng add @angular/fire``` ([NPM Firebase](https://www.npmjs.com/package/firebase))
 * **Run** the project on the browser with ```ionic serve```
 
 ### 📥Download
