@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { getAuth } from '@angular/fire/auth';
+import { collection, doc, docData, DocumentReference, Firestore, getDoc, getDocFromServer } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, Subscription, take, tap } from 'rxjs';
+import { Observable, shareReplay, Subscription, take, tap } from 'rxjs';
 @Component({
   selector: 'app-view-note',
   templateUrl: './view-note.page.html',
   styleUrls: ['./view-note.page.scss'],
 })
 export class ViewNotePage implements OnInit {
-  note$: Observable<any[]> | undefined;
-  constructor(private route: ActivatedRoute) { }
   noteId!: string;
+  
+  constructor(private route: ActivatedRoute, private firestore: Firestore) {
+
+  }
   ngOnInit() {
     this.route.params
       .pipe(
@@ -18,7 +22,12 @@ export class ViewNotePage implements OnInit {
       )
       .subscribe();
   }
+
   ionViewDidEnter() {
     console.log(this.noteId);
+  }
+
+  getNote() {
+
   }
 }

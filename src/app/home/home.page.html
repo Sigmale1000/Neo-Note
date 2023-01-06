@@ -15,13 +15,12 @@
     <div class="userNotes ion-padding">
       <h2>Your Notes</h2>
       <ng-container *ngFor='let note of notes$ | async'>
-        <ion-item button [routerLink]="['{{ note.id }}']">
+        <ion-item button href="home/{{ note.id }}">
           <h5 class=“notesTitle”>{{ note.Title }} </h5>
         </ion-item>
       </ng-container>
     </div>
   </ion-content>
-
 
   <ion-footer>
     <ion-toolbar>
@@ -35,7 +34,7 @@
       </ion-buttons>
       <ion-buttons slot="end">
         <ion-button [routerLink]="['/new-note']">
-          <ion-icon name="create-outline"></ion-icon>
+          <ion-icon name="add-circle-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
