@@ -17,7 +17,6 @@
       <ng-container *ngFor='let note of notes$ | async'>
         <ion-item button>
           <h5 class=“notesTitle”>{{ note.Title }} </h5>
-          <ion-icon name="arrow-forward" slot="end"></ion-icon>
         </ion-item>
       </ng-container>
     </div>

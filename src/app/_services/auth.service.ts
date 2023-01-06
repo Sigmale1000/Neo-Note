@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Firestore, collection, collectionData, doc, docData, addDoc, deleteDoc, updateDoc, setDoc, getDoc } from '@angular/fire/firestore';
 import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, deleteUser, getAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-
+import { ToastController } from '@ionic/angular';
 
 
 @Injectable({
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 
 export class AuthService {
 
-  constructor(private auth: Auth, private firestore: Firestore, private router: Router,) { }
+  constructor(private auth: Auth, private firestore: Firestore, private router: Router, private toastController: ToastController) { }
 
   async register({ email, password }: { email: string, password: string }) {
     try {
@@ -79,10 +79,17 @@ export class AuthService {
   }
 
 
-  logout() {
+  async logout() {
     signOut(this.auth);
+    console.log("Logging out of current Account")
+    const toast = await this.toastController.create({
+      message: 'Succesfully logged out!',
+      duration: 1500,
+    });
+
+    await toast.present();
     this.router.navigateByUrl('/login', { replaceUrl: true });
   }
-
+  
   deleteUser() { }
 }

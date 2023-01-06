@@ -5,6 +5,9 @@ import { map, Observable, shareReplay, take } from 'rxjs';
 
 import { ActionSheetController } from '@ionic/angular';
 import { AuthService } from '../_services/auth.service'
+import { LoginPageRoutingModule } from '../login/login-routing.module';
+import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 
 
@@ -21,7 +24,7 @@ export class HomePage {
   result: string | undefined;
 
   constructor(
-    private firestore: Firestore, private auth: Auth, private actionSheetCtrl: ActionSheetController, private authService: AuthService,
+    private firestore: Firestore, private auth: Auth, private actionSheetCtrl: ActionSheetController, private authService: AuthService, private router: Router, private toastController: ToastController
   ) {
     this.notes$ = this.getUserNotes().pipe(shareReplay(1));
   }
@@ -39,25 +42,17 @@ export class HomePage {
 
   async settings() {
     const actionSheet = await this.actionSheetCtrl.create({
-      header: 'Example header',
-      subHeader: 'Example subheader',
+      header: 'Settings',
+      subHeader: 'Here you can Logout from your account.',
       buttons: [
         {
-          text: 'Delete',
-          role: 'destructive',
+          text: 'Logout',
           data: {
-            action: 'delete',
-          },
-        },
-        {
-          text: 'Share',
-          data: {
-            action: this.authService.logout(),
+            action: 'logout',
           },
         },
         {
           text: 'Cancel',
-          role: 'cancel',
           data: {
             action: 'cancel',
           },
@@ -69,6 +64,12 @@ export class HomePage {
 
     const result = await actionSheet.onDidDismiss();
     this.result = JSON.stringify(result, null, 2);
+    if (this.result === "logout") {
+      await this.authService.logout()
+    }
+    else{
+      
+    }
   }
 
   ngOnInit() {
