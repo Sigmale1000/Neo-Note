@@ -25,16 +25,68 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-ion-modal {
-    &.center {
-        --width: calc(100% - 2em);
-        align-items: center;
-        --height: auto;
+@media screen and (max-width: 3000px) {
+    .ion-page {
+        max-width: 65%;
+        margin: 0 auto;
+    }
 
-        .ion-page {
-            position: relative;
-            display: block;
-            contain: content;
-        }
+    .smallTA {
+        max-height: 40vw;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .ion-page {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .smallTA {
+        max-height: 40vw;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .ion-page {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .smallTA {
+        max-height: 40vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .ion-page {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .smallTA {
+        max-height: 40vw;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .ion-page {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .smallTA {
+        max-height: 40vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .ion-page {
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    .smallTA {
+        max-height: 40vw;
     }
 }

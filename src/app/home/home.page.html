@@ -27,7 +27,7 @@
   <ion-footer>
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-button [routerLink]="['/settings']">
+        <ion-button (click)="settings()">
           <ion-icon name="settings"></ion-icon>
         </ion-button>
         <ion-button [routerLink]="['/friends']">

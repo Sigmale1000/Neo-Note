@@ -4,6 +4,7 @@ import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signO
 import { map, Observable, shareReplay, take } from 'rxjs';
 
 import { ActionSheetController } from '@ionic/angular';
+import { AuthService } from '../_services/auth.service'
 
 
 
@@ -17,9 +18,10 @@ import { ActionSheetController } from '@ionic/angular';
 export class HomePage {
   userId!: String;
   notes$: Observable<any[]>;
+  result: string | undefined;
 
   constructor(
-    private firestore: Firestore, private auth: Auth, private actionSheetCtrl: ActionSheetController,
+    private firestore: Firestore, private auth: Auth, private actionSheetCtrl: ActionSheetController, private authService: AuthService,
   ) {
     this.notes$ = this.getUserNotes().pipe(shareReplay(1));
   }
@@ -32,7 +34,41 @@ export class HomePage {
   }
 
   openNote() {
-    
+
+  }
+
+  async settings() {
+    const actionSheet = await this.actionSheetCtrl.create({
+      header: 'Example header',
+      subHeader: 'Example subheader',
+      buttons: [
+        {
+          text: 'Delete',
+          role: 'destructive',
+          data: {
+            action: 'delete',
+          },
+        },
+        {
+          text: 'Share',
+          data: {
+            action: this.authService.logout(),
+          },
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          data: {
+            action: 'cancel',
+          },
+        },
+      ],
+    });
+
+    await actionSheet.present();
+
+    const result = await actionSheet.onDidDismiss();
+    this.result = JSON.stringify(result, null, 2);
   }
 
   ngOnInit() {

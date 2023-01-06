@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Firestore, collection, collectionData, doc, docData, addDoc, deleteDoc, updateDoc, setDoc, getDoc } from '@angular/fire/firestore';
 import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, deleteUser, getAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 
 
@@ -10,7 +11,7 @@ import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signO
 
 export class AuthService {
 
-  constructor(private auth: Auth, private firestore: Firestore) { }
+  constructor(private auth: Auth, private firestore: Firestore, private router: Router,) { }
 
   async register({ email, password }: { email: string, password: string }) {
     try {
@@ -79,7 +80,8 @@ export class AuthService {
 
 
   logout() {
-    return signOut(this.auth);
+    signOut(this.auth);
+    this.router.navigateByUrl('/login', { replaceUrl: true });
   }
 
   deleteUser() { }

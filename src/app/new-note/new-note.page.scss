@@ -12,7 +12,8 @@
     width: 100%;
     padding: 1% 1.5%;
     font-size: 18px;
-    min-height: 120vw;
+    resize: horizontal;
+    min-height: 600px;
     word-break: break-all;
     word-wrap: break-word;
 }
