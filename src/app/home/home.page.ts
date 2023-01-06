@@ -36,10 +36,6 @@ export class HomePage {
     return collectionData(jc, { idField: 'id' })
   }
 
-  openNote() {
-
-  }
-
   async settings() {
     const actionSheet = await this.actionSheetCtrl.create({
       header: 'Settings',
@@ -47,12 +43,14 @@ export class HomePage {
       buttons: [
         {
           text: 'Logout',
+          role: 'logout',
           data: {
             action: 'logout',
           },
         },
         {
           text: 'Cancel',
+          role: 'cancel',
           data: {
             action: 'cancel',
           },
@@ -64,14 +62,9 @@ export class HomePage {
 
     const result = await actionSheet.onDidDismiss();
     this.result = JSON.stringify(result, null, 2);
-    if (this.result === "logout") {
-      await this.authService.logout()
-    }
-    else{
-      
-    }
   }
 
   ngOnInit() {
   }
 }
+

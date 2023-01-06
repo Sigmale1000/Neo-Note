@@ -31,6 +31,12 @@ const routes: Routes = [
     loadChildren: () => import('./new-note/new-note.module').then(m => m.NewNotePageModule),
     ...canActivate(redirectUnauthorizedToLogin)
   },
+  {
+    path: 'view-note/:id',
+    loadChildren: () =>
+      import('./view-note/view-note.module').then((m) => m.ViewNotePageModule),
+    ...canActivate(redirectUnauthorizedToLogin),
+  },
 ];
 
 @NgModule({
