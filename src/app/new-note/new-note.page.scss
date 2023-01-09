@@ -22,11 +22,11 @@
     color: rgba(255, 255, 255, 0.776);
 }
 
-.textNote {
+ion-textarea {
     width: 100%;
     padding: 1% 1.5%;
     font-size: 18px;
-    height: 200vh;
+    min-height: 45vh;
     word-break: break-all;
     word-wrap: break-word;
 }

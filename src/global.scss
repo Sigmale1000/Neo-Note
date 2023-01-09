@@ -30,20 +30,12 @@
         max-width: 65%;
         margin: 0 auto;
     }
-
-    .smallTA {
-        max-height: 60vw;
-    }
 }
 
 @media screen and (max-width: 1350px) {
     .ion-page {
         max-width: 80%;
         margin: 0 auto;
-    }
-
-    .smallTA {
-        max-height: 55vw;
     }
 }
 
@@ -52,20 +44,12 @@
         max-width: 90%;
         margin: 0 auto;
     }
-
-    .smallTA {
-        max-height: 50vw;
-    }
 }
 
 @media screen and (max-width: 800px) {
     .ion-page {
         max-width: 90%;
         margin: 0 auto;
-    }
-
-    .smallTA {
-        max-height: 45vw;
     }
 }
 
@@ -74,19 +58,11 @@
         max-width: 95%;
         margin: 0 auto;
     }
-
-    .smallTA {
-        max-height: 40vw;
-    }
 }
 
 @media screen and (max-width: 550px) {
     .ion-page {
         max-width: none;
         margin: 0 auto;
-    }
-
-    .smallTA {
-        max-height: 40vw;
     }
 }
