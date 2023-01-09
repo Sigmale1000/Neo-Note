@@ -20,7 +20,7 @@ Are you tired of forgetting important tasks and notes? Look no further, because 
 ## 🧑‍💻Contributing
 We welcome anyone to contribute to the Neo Note project! If you find any bugs or have suggestions for improvements, feel free to fork the repository and create a pull request with your changes.
 
-### To Do's
+### ✅ To Do's
 - [ ] Refactor and clean up code
 - [ ] Overall style-up of UI
 - [ ] Expand login page / register page
