@@ -12,7 +12,9 @@ $RECYCLE.BIN/
 log.txt
 
 # Database collection
-.environment.ts
+
+environment.ts
+environment.prod.ts
 
 /.sourcemaps
 /.versions
