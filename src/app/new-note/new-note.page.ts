@@ -3,7 +3,7 @@ import { Firestore, collection, collectionData, doc, docData, addDoc, deleteDoc,
 import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, deleteUser, getAuth } from '@angular/fire/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AlertController, LoadingController, ActionSheetController } from '@ionic/angular';
+import { AlertController, LoadingController, ActionSheetController, ToastController } from '@ionic/angular';
 import { delay } from 'rxjs';
 import { AuthService } from '../_services/auth.service';
 import { DataService } from '../_services/data.service';
@@ -28,6 +28,7 @@ export class NewNotePage implements OnInit {
     private UserService: DataService,
     private actionSheetCtrl: ActionSheetController,
     private firestore: Firestore,
+    private toastController: ToastController
   ) { }
 
   async cameraActionSheet() {
@@ -71,6 +72,12 @@ export class NewNotePage implements OnInit {
     const addNote = await addDoc(collection(this.firestore, `users/${user?.uid}/notes`), this.credentials.value)
     this.router.navigateByUrl('/home', { replaceUrl: true });
     await loading.dismiss();
+    const toast = await this.toastController.create({
+      message: 'Succesfully created new note.',
+      duration: 1500,
+    });
+
+    await toast.present();
   }
 
   ngOnInit() {
@@ -79,8 +86,9 @@ export class NewNotePage implements OnInit {
     if (user != null) {
       const currentDate = new Date();
       this.credentials = this.fb.group({
-        Title: ['', [Validators.required, Validators.minLength(1)]],
-        Main: ['', [Validators.minLength(0)]],
+        title: ['', [Validators.required, Validators.minLength(1)]],
+        main: ['', [Validators.minLength(0)]],
+        banner: ['', [Validators.minLength(0)]],
         createdAt: currentDate,
         updatetAt: currentDate,
         image: '',

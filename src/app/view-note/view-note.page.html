@@ -4,14 +4,27 @@
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
     <ion-title>Note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <p>{{ noteCreatedAt }}</p>
+  <h1>{{ noteTitle }}</h1>
+  <img src="{{noteImage}}" alt="" id="noteImage">
+  <h5>{{ noteMain }} </h5>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="deleteNote()">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button defaultHref="/">
+      <ion-button (click)="editNote()">
         <ion-icon name="create-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <h5></h5>
-</ion-content>
+</ion-footer>

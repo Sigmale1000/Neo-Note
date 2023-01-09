@@ -10,12 +10,16 @@
 <ion-content>
   <form (ngSubmit)="newNote()" [formGroup]="credentials">
     <ion-item fill="solid" class="ion-margin-bottom" counter="true">
-      <ion-input class="titleNote" type="text" placeholder="Your title" formControlName="Title"
+      <ion-input class="titleNote" type="text" placeholder="Your title" formControlName="title"
         maxlength="40"></ion-input>
       <ion-note slot="error">Please enter atleast one character.</ion-note>
     </ion-item>
     <ion-item fill="solid" counter="true" class="smallTA">
-      <ion-textarea class="textNote" type="text" placeholder="Your note" formControlName="Main"
+      <ion-input class="textBanner" type="url" placeholder="Your banner (https://example.com/image/img1)" formControlName="banner"
+        maxlength="400"></ion-input>
+    </ion-item>
+    <ion-item fill="solid" counter="true" class="smallTA">
+      <ion-textarea class="textNote" type="text" placeholder="Your note" formControlName="main"
         maxlength="3000"></ion-textarea>
     </ion-item>
   </form>

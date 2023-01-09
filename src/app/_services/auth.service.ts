@@ -49,12 +49,12 @@ export class AuthService {
       const colNotesRef = collection(docNotesRef, "notes")
 
       addDoc(colNotesRef, {
-        Title: 'Welcome to Neo Note',
-        Main: 'Hello There! <br> Welcome to Neo Note, a place where you can write notes easy, fast and reliable.',
+        title: 'Welcome to Neo Note',
+        main: 'Hello There! Welcome to Neo Note, a place where you can write notes easy, fast and reliable. Create your first note with our help on Github. We are happy about every new user of our app and we welcome you to give us feedback! There is a lot to come still, so be prepared to see more.',
         createdAt: currentDate,
         updatetAt: currentDate,
         createdBy: 'Neo Note',
-        image: 'https://github.com/Sigmale1000/neonote/raw/master/md-banner.png',
+        banner: 'https://github.com/Sigmale1000/neonote/raw/master/md-banner.png',
         rememberDate: currentDate,
         expirationDate: currentDate,
       });

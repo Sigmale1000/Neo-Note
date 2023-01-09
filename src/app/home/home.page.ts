@@ -46,6 +46,9 @@ export class HomePage {
           data: {
             action: 'logout',
           },
+          handler: () => {
+            this.authService.logout();
+          }  
         },
         {
           text: 'Cancel',
