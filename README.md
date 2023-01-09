@@ -29,3 +29,4 @@ Head over to our GitHub repository to download the latest release of [Neo Note](
 
 -------------------------------------------------
 ## 🦠Versions
+¬ ***v1.0.0*** // Release of basic app and functions
