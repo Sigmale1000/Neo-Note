@@ -30,4 +30,4 @@ Head over to our GitHub repository to download the latest release of [Neo Note](
 -------------------------------------------------
 ## 🦠Versions
 ¬ ***v1.0.0*** // Release of basic app and functions <br>
-    ¬ ***v1.0.1*** // Fixed display bug of new note page (text input) for web
+--¬ ***v1.0.1*** // Fixed display bug of new note page (text input) for web
