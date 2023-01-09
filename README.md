@@ -19,6 +19,16 @@ Are you tired of forgetting important tasks and notes? Look no further, because 
  💽 Uses Firebase as the Database  ([Firebase](httpsfirebase.google.com)) <br>
 ## 🧑‍💻Contributing
 We welcome anyone to contribute to the Neo Note project! If you find any bugs or have suggestions for improvements, feel free to fork the repository and create a pull request with your changes.
+
+### To Do's
+- [ ] Refactor and clean up code
+- [ ] Overall style-up of UI
+- [ ] Expand login page / register page
+- [ ] Add "infinite" height for textarea (new note)
+
+- [ ] Publish app to App Store
+- [ ] Publish app to Google Play Store
+
 ### 🤧Commands
 There are a few commands that need to be run for the project to work on your computer!
 * First of all you have to have **Node.js** installed to manage the packages run ```npm i``` ([Node.js](https://nodejs.org/en/))
