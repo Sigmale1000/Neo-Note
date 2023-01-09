@@ -9,6 +9,11 @@ Are you tired of forgetting important tasks and notes? Look no further, because 
  🤝 Share your Notes with friends <br>
  📅 Add expiry- and reminder dates to your notes <br>
  🏪 Available on the internet, iOS and Google Play Store <br>
+ <div>
+  <img src=".github/ios-app1.png" width=20%/>
+ <img src=".github/ios-app2.png" width=20%/>
+  </div>
+  
 ## 💁Information
  🔖 Made with Ionic --Angular Framework  ([Ionic](https://ionicframework.com) / [Angular](https://angular.io)) <br>
  💽 Uses Firebase as the Database  ([Firebase](httpsfirebase.google.com)) <br>
