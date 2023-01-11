@@ -37,6 +37,13 @@ const routes: Routes = [
       import('./view-note/view-note.module').then((m) => m.ViewNotePageModule),
     ...canActivate(redirectUnauthorizedToLogin),
   },
+  {
+    path: 'edit-note/:id',
+    loadChildren: () =>
+      import('./edit-note/edit-note.module').then((m) => m.EditNotePageModule),
+    ...canActivate(redirectUnauthorizedToLogin),
+  },
+
 ];
 
 @NgModule({
