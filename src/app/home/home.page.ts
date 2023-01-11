@@ -48,7 +48,7 @@ export class HomePage {
           },
           handler: () => {
             this.authService.logout();
-          }  
+          }
         },
         {
           text: 'Cancel',

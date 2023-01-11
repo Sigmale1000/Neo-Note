@@ -90,6 +90,12 @@ export class AuthService {
     await toast.present();
     this.router.navigateByUrl('/login', { replaceUrl: true });
   }
-  
-  deleteUser() { }
+
+  deleteUser() {
+    // TODO: Add delete user function
+  }
+
+  reauthenticateUser(){
+    // TODO: Add reauthenticate user function
+  }
 }

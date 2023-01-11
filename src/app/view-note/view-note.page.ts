@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { getAuth } from '@angular/fire/auth';
 import { collection, deleteDoc, doc, docData, DocumentReference, Firestore, getDoc, getDocFromServer } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
-import { LoadingController, ToastController } from '@ionic/angular';
+import { ActionSheetController, AlertController, LoadingController, ToastController } from '@ionic/angular';
 import { Observable, shareReplay, Subscription, take, tap } from 'rxjs';
+import { AuthService } from '../_services/auth.service';
 @Component({
   selector: 'app-view-note',
   templateUrl: './view-note.page.html',
@@ -18,7 +19,7 @@ export class ViewNotePage implements OnInit {
   noteCreatedAt!: Observable<any[]>;
   noteUpdatedAt!: Observable<any[]>;
 
-  constructor(private route: ActivatedRoute, private firestore: Firestore, private loadingController: LoadingController, private router: Router, private toastController: ToastController) {
+  constructor(private route: ActivatedRoute, private firestore: Firestore, private loadingController: LoadingController, private router: Router, private toastController: ToastController, private authService: AuthService, private actionSheetCtrl: ActionSheetController, private alertController: AlertController) {
 
   }
 
@@ -58,6 +59,33 @@ export class ViewNotePage implements OnInit {
   }
 
   async deleteNote() {
+    const alert = await this.alertController.create({
+      header: 'Delete Note?',
+      subHeader: 'This action is irreversible.',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+
+          },
+        },
+        {
+          text: 'Delete',
+          role: 'confirm',
+          handler: () => {
+            this.deleteNoteYes();
+          },
+        },
+      ],
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+  }
+
+  async deleteNoteYes() {
     const loading = await this.loadingController.create();
     await loading.present();
     const auth = getAuth();

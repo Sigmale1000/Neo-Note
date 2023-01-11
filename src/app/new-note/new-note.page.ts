@@ -61,7 +61,6 @@ export class NewNotePage implements OnInit {
     await actionSheet.present();
 
     const result = await actionSheet.onDidDismiss();
-    this.result = JSON.stringify(result, null, 2);
   }
 
   async newNote() {
