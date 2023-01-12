@@ -24,8 +24,10 @@ We welcome anyone to contribute to the Neo Note project! If you find any bugs or
 - [ ] Refactor and clean up code
 - [ ] Overall style-up of UI
 - [ ] Expand login page / register page
+- [X] Create edit note function
 - [ ] Add "infinite" height for textarea (new note)
-
+- [ ] Add date functions for notes
+ 
 - [ ] Publish app to App Store
 - [ ] Publish app to Google Play Store
 
