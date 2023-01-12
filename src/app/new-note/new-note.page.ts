@@ -14,8 +14,10 @@ import { DataService } from '../_services/data.service';
   styleUrls: ['./new-note.page.scss'],
 })
 export class NewNotePage implements OnInit {
+  
   credentials!: FormGroup;
-  result!: string;
+  result!: string
+
   customCounterFormatter(inputLength: number, maxLength: number) {
     return `${maxLength - inputLength} characters remaining`;
   }

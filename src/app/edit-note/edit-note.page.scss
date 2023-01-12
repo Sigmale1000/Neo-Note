@@ -1,0 +1,36 @@
+.titleNote {
+    width: 100%;
+    padding: 1% 1.5%;
+    font-size: 23px;
+}
+
+.titleNote ion-label {
+    color: rgba(255, 255, 255, 0.776);
+}
+
+
+.textBanner {
+    width: 100%;
+    padding: 1% 1.5%;
+    font-size: 18px;
+    resize: horizontal;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.textBanner ion-label {
+    color: rgba(255, 255, 255, 0.776);
+}
+
+ion-textarea {
+    width: 100%;
+    padding: 1% 1.5%;
+    font-size: 18px;
+    min-height: 45vh;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.textNote ion-label {
+    color: rgba(255, 255, 255, 0.776);
+}

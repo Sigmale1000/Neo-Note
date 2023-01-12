@@ -18,6 +18,7 @@ export class ViewNotePage implements OnInit {
   noteImage!: Observable<any[]>;
   noteCreatedAt!: Observable<any[]>;
   noteUpdatedAt!: Observable<any[]>;
+  note: any;
 
   constructor(private route: ActivatedRoute, private firestore: Firestore, private loadingController: LoadingController, private router: Router, private toastController: ToastController, private authService: AuthService, private actionSheetCtrl: ActionSheetController, private alertController: AlertController) {
 

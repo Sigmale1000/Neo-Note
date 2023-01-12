@@ -1,9 +1,38 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>edit-note</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='home/view-note/{{ noteId }}'></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit note</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <form (ngSubmit)="editNote()" [formGroup]="credentials">
+    <ion-item fill="solid" class="ion-margin-bottom" counter="true">
+      <ion-input class="titleNote" type="text" placeholder="Your title" formControlName="title"
+        maxlength="40"></ion-input>
+      <ion-note slot="error">Please enter atleast one character.</ion-note>
+    </ion-item>
+    <ion-item fill="solid" counter="false" class="smallTA">
+      <ion-textarea class="textNote" type="text" placeholder="Your note" formControlName="main"
+        maxlength="3000"></ion-textarea>
+    </ion-item>
+  </form>
 </ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="cameraActionSheet()">
+        <ion-icon slot="icon-only" name="camera"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="editNote()" type="submit" [disabled]="!credentials">
+        <ion-icon slot="icon-only" name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

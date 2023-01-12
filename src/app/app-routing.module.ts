@@ -32,13 +32,13 @@ const routes: Routes = [
     ...canActivate(redirectUnauthorizedToLogin)
   },
   {
-    path: 'view-note/:id',
+    path: 'home/view-note/:id',
     loadChildren: () =>
       import('./view-note/view-note.module').then((m) => m.ViewNotePageModule),
     ...canActivate(redirectUnauthorizedToLogin),
   },
   {
-    path: 'edit-note/:id',
+    path: 'home/edit-note/:id',
     loadChildren: () =>
       import('./edit-note/edit-note.module').then((m) => m.EditNotePageModule),
     ...canActivate(redirectUnauthorizedToLogin),
