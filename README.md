@@ -24,8 +24,10 @@ We welcome anyone to contribute to the Neo Note project! If you find any bugs or
 - [ ] Refactor and clean up code
 - [ ] Overall style-up of UI
 - [ ] Expand login page / register page
+- [X] Create edit note function
 - [ ] Add "infinite" height for textarea (new note)
-
+- [ ] Add date functions for notes
+ 
 - [ ] Publish app to App Store
 - [ ] Publish app to Google Play Store
 
@@ -46,5 +48,6 @@ Head over to our GitHub repository to download the latest release of [Neo Note](
 -------------------------------------------------
 ## 🦠Versions
 ¬ ***v1.0.0*** // Release of basic app and functions <br>
---¬ ***v1.0.1*** // Fixed display bug of new note page (text input) for web <br>
---¬ ***v1.0.2*** // Added confirmation function for deleting notes <br>
+----¬ ***v1.0.1*** // Fixed display bug of new note page (text input) for web <br>
+----¬ ***v1.0.2*** // Added confirmation function for deleting notes <br>
+--¬ ***v1.1.0*** // Added edit note function / page <br> 
