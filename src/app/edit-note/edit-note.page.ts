@@ -21,7 +21,6 @@ export class EditNotePage implements OnInit {
   noteTitle!: Observable<any[]>;
   noteMain!: Observable<any[]>;
   noteImage!: Observable<any[]>;
-  noteCreatedAt!: Observable<any[]>;
   noteUpdatedAt!: Observable<any[]>;
 
   customCounterFormatter(inputLength: number, maxLength: number) {
@@ -79,6 +78,13 @@ export class EditNotePage implements OnInit {
     console.log(this.credentials.value)
     this.router.navigateByUrl(`/home/view-note/${this.noteId}`, { replaceUrl: true });
     await loading.dismiss();
+
+    const toast = await this.toastController.create({
+      message: 'Succesfully edited note.',
+      duration: 1500,
+    });
+
+    await toast.present();
   }
 
   async getNote() {
@@ -96,6 +102,7 @@ export class EditNotePage implements OnInit {
           tap((param) => (this.noteTitle = noteInfo['title'])),
           tap((param) => (this.noteMain = noteInfo['main'])),
           tap((param) => (this.noteImage = noteInfo['banner'])),
+          tap((param) => (this.noteUpdatedAt = noteInfo['updatedAt'])),
         )
         .subscribe();
     }
