@@ -64,7 +64,6 @@ export class EditNotePage implements OnInit {
         expirationDate: '',
       });
     }
-
     this.getNote();
   }
 
