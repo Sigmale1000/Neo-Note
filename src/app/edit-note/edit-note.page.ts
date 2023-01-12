@@ -60,9 +60,7 @@ export class EditNotePage implements OnInit {
         title: ['', [Validators.required, Validators.minLength(1)]],
         main: ['', [Validators.minLength(0)]],
         banner: ['', [Validators.minLength(0)]],
-        createdAt: currentDate,
         updatetAt: currentDate,
-        image: '',
         rememberDate: '',
         expirationDate: '',
       });
