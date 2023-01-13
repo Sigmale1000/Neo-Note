@@ -51,3 +51,4 @@ Head over to our GitHub repository to download the latest release of [Neo Note](
 ----¬ ***v1.0.1*** // Fixed display bug of new note page (text input) for web <br>
 ----¬ ***v1.0.2*** // Added confirmation function for deleting notes <br>
 --¬ ***v1.1.0*** // Added edit note function / page <br> 
+----¬ ***v1.1.1*** // Bug fixes (removed edit note bug) <br>
