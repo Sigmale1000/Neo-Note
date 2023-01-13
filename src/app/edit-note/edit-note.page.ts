@@ -20,7 +20,7 @@ export class EditNotePage implements OnInit {
   noteId!: string;
   noteTitle!: Observable<any[]>;
   noteMain!: Observable<any[]>;
-  noteImage!: Observable<any[]>;
+  noteBanner!: Observable<any[]>;
   noteUpdatedAt!: Observable<any[]>;
 
   customCounterFormatter(inputLength: number, maxLength: number) {
@@ -100,7 +100,7 @@ export class EditNotePage implements OnInit {
           take(1),
           tap((param) => (this.noteTitle = noteInfo['title'])),
           tap((param) => (this.noteMain = noteInfo['main'])),
-          tap((param) => (this.noteImage = noteInfo['banner'])),
+          tap((param) => (this.noteBanner = noteInfo['banner'])),
           tap((param) => (this.noteUpdatedAt = noteInfo['updatedAt'])),
         )
         .subscribe();

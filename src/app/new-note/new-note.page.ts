@@ -7,6 +7,10 @@ import { AlertController, LoadingController, ActionSheetController, ToastControl
 import { delay } from 'rxjs';
 import { AuthService } from '../_services/auth.service';
 import { DataService } from '../_services/data.service';
+import { Camera, CameraResultType } from '@capacitor/camera';
+import { CameraPlugin } from '@capacitor/camera/dist/esm/definitions';
+import { getStorage, provideStorage, Storage, uploadBytes } from '@angular/fire/storage';
+import { ref } from 'firebase/storage';
 
 @Component({
   selector: 'app-new-note',
@@ -14,7 +18,7 @@ import { DataService } from '../_services/data.service';
   styleUrls: ['./new-note.page.scss'],
 })
 export class NewNotePage implements OnInit {
-  
+
   credentials!: FormGroup;
   result!: string
 
@@ -30,7 +34,7 @@ export class NewNotePage implements OnInit {
     private UserService: DataService,
     private actionSheetCtrl: ActionSheetController,
     private firestore: Firestore,
-    private toastController: ToastController
+    private toastController: ToastController,
   ) { }
 
   async cameraActionSheet() {
