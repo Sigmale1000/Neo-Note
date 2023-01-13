@@ -20,6 +20,33 @@
     <ion-button type="button" expand="block" color="primary" (click)="register()" [disabled]="!credentials.valid">Create
       account</ion-button>
   </form>
+  <ion-card>
+    <img alt="Neo Note logo" src="https://ychef.files.bbci.co.uk/976x549/p01h3jq8.jpg" />
+    <ion-card-header>
+      <ion-card-title>Welcome on our platform!</ion-card-title>
+      <ion-card-subtitle>We hope we can help you trough the day.</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+        Neo Note is a open-source platform where you can easily save, edit and delete notes. We are offering online solutions for your data to access from anywhere in the world trough your account login. Feel free to give us feedback on our app and your ideas. We appreciate every help!
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Follow us on social media.</ion-card-title>
+      <ion-card-subtitle>See our progress on our social media platforms.</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      We post information about our app, partners and other things on our social media accounts. If you want to stay
+      connected, make sure to follow us there.
+    </ion-card-content>
+
+    <ion-button fill="clear" href="https://github.com/Sigmale1000/neonote">GitHub
+    </ion-button>
+    <ion-button fill="clear" href="https://twitter.com/">Twitter
+    </ion-button>
+  </ion-card>
 </ion-content>
 
 <ion-footer>
@@ -27,6 +54,9 @@
     <ion-buttons slot="start">
       <ion-button href="https://github.com/Sigmale1000/neonote">
         <ion-icon name="logo-github"></ion-icon>
+      </ion-button>
+      <ion-button href="https://twitter.com/">
+        <ion-icon name="logo-twitter"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="end">
