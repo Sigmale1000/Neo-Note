@@ -12,7 +12,9 @@ import { DataService } from '../_services/data.service';
   styleUrls: ['./login.page.scss']
 })
 export class LoginPage implements OnInit {
+
   credentials!: FormGroup;
+  currentYear!: string;
 
   constructor(
     private fb: FormBuilder,
@@ -37,6 +39,10 @@ export class LoginPage implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
+
+    const currentYearNumber = new Date().getFullYear();
+    this.currentYear = currentYearNumber.toString();
+
   }
 
   async register() {

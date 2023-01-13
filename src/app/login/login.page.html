@@ -17,6 +17,20 @@
     </ion-item>
 
     <ion-button type="submit" expand="block" color="primary" [disabled]="!credentials.valid">Log in</ion-button>
-    <ion-button type="button" expand="block" color="primary" (click)="register()">Create account</ion-button>
+    <ion-button type="button" expand="block" color="primary" (click)="register()" [disabled]="!credentials.valid">Create
+      account</ion-button>
   </form>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button href="https://github.com/Sigmale1000/neonote">
+        <ion-icon name="logo-github"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <h6>	&#169; {{ currentYear }}, Daniel Jancar</h6>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
