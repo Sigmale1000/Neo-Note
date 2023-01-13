@@ -11,7 +11,7 @@
   <form (ngSubmit)="editNote()" [formGroup]="credentials">
     <ion-item fill="solid" class="ion-margin-bottom" counter="true">
       <ion-input class="titleNote"value="{{ noteTitle }}"  type="text" placeholder="Your title" formControlName="title"
-        maxlength="40"></ion-input>
+        maxlength="40" minlength="1"></ion-input>
       <ion-note slot="error">Please enter atleast one character.</ion-note>
     </ion-item>
     <ion-item fill="solid" counter="false" class="smallTA">
@@ -30,7 +30,7 @@
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button (click)="editNote()" type="submit" [disabled]="!credentials">
+      <ion-button (click)="editNote()" type="submit" [disabled]="!credentials.valid">
         <ion-icon slot="icon-only" name="checkmark"></ion-icon>
       </ion-button>
     </ion-buttons>
