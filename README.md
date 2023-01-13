@@ -4,11 +4,11 @@
 Are you tired of forgetting important tasks and notes? Look no further, because Neo Note has got you covered! With our sleek and intuitive web-app, you can easily add, edit, and delete notes on the go. Whether you're at home or on the go, Neo Note has got your back. :)
 
 ## ⛲Features 
- 🔒 Login and register to access your notes from any device [x] <br> 
- ✍️ Add, edit and delete notes with ease [x] <br>
- 🤝 Share your Notes with friends [ ] <br>
- 📅 Add expiry- and reminder dates to your notes [ ] <br>
- 🏪 Available on the internet, iOS and Google Play Store [ ] <br>
+ 🔒 Login and register to access your notes from any device ✅ <br> 
+ ✍️ Add, edit and delete notes with ease ✅ <br>
+ 🤝 Share your Notes with friends ❌ <br>
+ 📅 Add expiry- and reminder dates to your notes ❌ <br>
+ 🏪 Available on the internet, iOS and Google Play Store ❌ <br>
  <div>
   <img src=".github/ios-app1.png" width=20%/>
  <img src=".github/ios-app2.png" width=20%/>
