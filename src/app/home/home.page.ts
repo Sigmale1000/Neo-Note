@@ -31,8 +31,8 @@ export class HomePage {
   getUserNotes(): Observable<any[]> {
     const auth = getAuth();
     const user = auth.currentUser;
-    const jc = collection(this.firestore, `users/${user?.uid}/notes`);
-    return collectionData(jc, { idField: 'id' })
+    const userNotes = collection(this.firestore, `users/${user?.uid}/notes`);
+    return collectionData(userNotes, { idField: 'noteId' })
   }
 
   async settings() {
