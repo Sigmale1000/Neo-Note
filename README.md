@@ -43,7 +43,7 @@ There are a few commands that need to be run for the project to work on your com
 ### 📥Download
 Head over to our GitHub repository to download the latest release of [Neo Note](https://github.com/Sigmale1000/neonote).
 
-🚀 Start Taking Notes with Neo Note Today! [Neo Note web](https://neonote.sigmale.dev)
+🚀 Start Taking Notes with Neo Note Today! ([Neo Note web](https://neonote.sigmale.dev))
 
 -------------------------------------------------
 ## 🦠Versions
