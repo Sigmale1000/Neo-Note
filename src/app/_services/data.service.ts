@@ -6,8 +6,7 @@ import { Auth, deleteUser, getAuth } from '@angular/fire/auth';
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataService {
 
-
-  
 }
